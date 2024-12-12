@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="botgui",
-    version="0.1.2",
+    version="0.1.3",
     description='Class to build custom UI for bot processes',
     author='Ben-Hur P. B. Santos',
     author_email='botlorien@gmail.com',
