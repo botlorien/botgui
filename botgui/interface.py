@@ -60,25 +60,25 @@ class Interface:
         self.chat_image = None
         self.home_image = None
         self.logo_image = self._load_image(
-            os.path.join(PARENT_DIR, 'assets/home2.png')
+            os.path.join(CURRENT_DIR, 'assets/home2.png')
             )
         self.home_image = self._load_image(
-            os.path.join(PARENT_DIR, 'assets/home.png'),
+            os.path.join(CURRENT_DIR, 'assets/home.png'),
             30,
             30
             )
         self.config_image = self._load_image(
-            os.path.join(PARENT_DIR, 'assets/configuracoes.png'),
+            os.path.join(CURRENT_DIR, 'assets/configuracoes.png'),
             30,
             30
             )
         self.options_image = self._load_image(
-            os.path.join(PARENT_DIR, 'assets/options.png'),
+            os.path.join(CURRENT_DIR, 'assets/options.png'),
             30,
             30
             )
         self.greeting_image = self._load_image(
-            os.path.join(PARENT_DIR, 'assets/robo_hi.png'),
+            os.path.join(CURRENT_DIR, 'assets/robo_hi.png'),
             150,
             150
             )
@@ -371,7 +371,7 @@ class Interface:
             list_func_home_buttons = [partial(print, button) for button in range(len(list_name_home_buttons))]
 
         self.home_options_buttons = list(range(len(list_name_home_buttons)))
-        self.bot_image = self._load_image(os.path.join(PARENT_DIR, 'assets/robot.png'))  # bot_walk
+        self.bot_image = self._load_image(os.path.join(CURRENT_DIR, 'assets/robot.png'))  # bot_walk
         for i, param in enumerate(list_name_home_buttons):
             last_row = i + 2
             self.home_options_buttons[i] = customtkinter.CTkButton(self.home_options_buttons_frame,
@@ -404,7 +404,7 @@ class Interface:
             list_func_img_buttons = [partial(print, button) for button in range(len(list_name_img_buttons))]
 
         self.img_options_buttons = list(range(len(list_name_img_buttons)))
-        self.bot_image = self._load_image(os.path.join(PARENT_DIR, 'assets/robot.png'))  # bot_walk
+        self.bot_image = self._load_image(os.path.join(CURRENT_DIR, 'assets/robot.png'))  # bot_walk
         for i, param in enumerate(list_name_img_buttons):
             last_row = i + 3
             self.img_options_buttons[i] = customtkinter.CTkButton(self.img_options_buttons_frame,
@@ -822,7 +822,7 @@ class Interface:
         self.entry_frame = customtkinter.CTkFrame(self.credentials_window)
         self.entry_frame.grid(row=0, column=0, padx=(20, 20), pady=(20, 20), sticky="nsew")
 
-        image = self._load_image(os.path.join(PARENT_DIR, f'assets/{self.appname}_logo.png'), 30, 30)
+        image = self._load_image(os.path.join(CURRENT_DIR, f'assets/{self.appname}_logo.png'), 30, 30)
         self.label_login = customtkinter.CTkLabel(self.entry_frame, text="Insira suas credenciais!",
                                                   font=customtkinter.CTkFont(size=18, weight="bold"),
                                                   image=image,
@@ -925,8 +925,8 @@ class Interface:
         self.messagebox_window.rowconfigure(1, weight=1)
         self.messagebox_window.columnconfigure(0, weight=1)
 
-        image = self._load_image(os.path.join(PARENT_DIR, 'assets/warning.png')) if type_alert == 'warning' \
-            else self._load_image(os.path.join(PARENT_DIR, 'assets/info.png'))
+        image = self._load_image(os.path.join(CURRENT_DIR, 'assets/warning.png')) if type_alert == 'warning' \
+            else self._load_image(os.path.join(CURRENT_DIR, 'assets/info.png'))
         self.label_image = customtkinter.CTkLabel(self.messagebox_window,
                                                   text='',
                                                   image=image,
@@ -975,7 +975,7 @@ class Interface:
             with Image.open(path) as img:
                 img_obg = img.copy()
         except Exception as e:
-            img_obg = Image.open(os.path.abspath(os.path.join(PARENT_DIR, 'assets/warning.png')))
+            img_obg = Image.open(os.path.abspath(os.path.join(CURRENT_DIR, 'assets/warning.png')))
         return customtkinter.CTkImage(img_obg, size=(width, height))
 
     def _resize_img_proportional(self, max_size, width, height):

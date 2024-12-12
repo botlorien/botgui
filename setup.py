@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="botgui",
-    version="0.1.0",
+    version="0.1.2",
     description='Class to build custom UI for bot processes',
     author='Ben-Hur P. B. Santos',
     author_email='botlorien@gmail.com',
@@ -11,7 +11,10 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/botlorien/botgui",  # Link para o repositório
     packages=find_packages(),  # Especifica que os pacotes estão na pasta src
-    #  package_dir={"": "src"},  # Configura o diretório-base como src
+    include_package_data=True,  # Inclui arquivos de dados especificados no MANIFEST.in
+    package_data={
+        '': ['assets/*'],  # Inclui todos os arquivos na pasta assets
+    },
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
