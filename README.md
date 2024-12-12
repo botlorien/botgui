@@ -79,6 +79,20 @@ if __name__ == "__main__":
             )
 
 ```
+### Tela principal
+![Imagens do projeto](https://github.com/botlorien/botgui/blob/main/botgui/assets/customgui.png?raw=true)
+
+### Mensagem depois de clickar em task1 e a tarefa finalizada com sucesso
+![Imagens do projeto](https://github.com/botlorien/botgui/blob/main/botgui/assets/customgui2.png?raw=true)
+
+### Mensagem depois de clickar em task2 e a tarefa finalizada com erro
+![Imagens do projeto](https://github.com/botlorien/botgui/blob/main/botgui/assets/customgui3.png?raw=true)
+
+### Tela depois de clickar em task3 que redireciona para um leitor de imagens
+![Imagens do projeto](https://github.com/botlorien/botgui/blob/main/botgui/assets/customgui4.png?raw=true)
+
+### Tela depois de clickar em config na barra lateral de navegação
+![Imagens do projeto](https://github.com/botlorien/botgui/blob/main/botgui/assets/customgui5.png?raw=true)
 
 ## Licença
 
